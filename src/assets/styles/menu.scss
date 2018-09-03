@@ -1,0 +1,47 @@
+.parent_logo{
+    width: 50%;
+    display: inline-block;
+    #logo{
+      width: 90px;
+      height: 40px;
+      display: inline-block;
+      line-height: 40px;
+      background: url('./assets/images/hellolaw_logo_2color.svg') no-repeat;
+      background-size: 100%;
+      text-indent: -9999px;
+    }
+  }
+  
+  .mainmenu{
+    padding: 5px 10px;
+    background: #fff;
+    height: 40px;
+    border-bottom: 1px solid #dededd;
+    width: 100%;
+    display: block;
+  }
+  
+  .menu-actions{
+    float: right;
+    a{
+      color: $corporate-main;
+      padding-left: 30px;
+      display: inline-block;
+      span{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        box-sizing : border-box;
+        &#menu_icn{
+          background: url('./assets/images/menu.svg') no-repeat center center;
+        }
+        &#close_icn{
+          background: url('./assets/images/close.svg') no-repeat center center;
+        }
+      }
+    }
+  }
+  

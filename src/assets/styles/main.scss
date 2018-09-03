@@ -1,9 +1,14 @@
-@import "assets/styles/thirdParty/normalize.css";
 
 // variables
 
 $font-size: 12px;
 $font-color: #30384f;
+$corporate-main: #ffa300;
+
+
+@import "assets/styles/thirdParty/normalize.css";
+@import "assets/styles/forms.scss";
+@import "assets/styles/menu.scss";
 
 // Pages styles - common scss for all Pages
 
@@ -16,4 +21,14 @@ html, body {
   font-size: $font-size;
   line-height: 15px;
   color: $font-color;
+}
+
+div, input, nav{
+  box-sizing : border-box;
+}
+
+.row{
+  padding: 15px;
+  display: block;
+  position: relative;
 }

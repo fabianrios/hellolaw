@@ -1,7 +1,16 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <font-awesome-icon icon="coffee" />
+    <div class="row">
+      <h1>{{ msg }}</h1>
+      <p>Please log in with your credentials.</p>
+      <form action="login">
+        <label for="email">E-Mail Address</label>
+        <input type="email" name="email" id="email" value="bob.loblaw@lawblog.com">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Log In" class="button radius">
+      </form>
+    </div>
   </div>
 </template>
 
@@ -10,7 +19,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Hello lawyer!'
     }
   }
 }

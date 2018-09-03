@@ -5,10 +5,10 @@ import App from './App'
 import router from './router'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faCoffee)
+library.add(faTimes, faBars)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
