@@ -1,0 +1,19 @@
+@import "assets/styles/thirdParty/normalize.css";
+
+// variables
+
+$font-size: 12px;
+$font-color: #30384f;
+
+// Pages styles - common scss for all Pages
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+  letter-spacing: normal;
+  margin: 0;
+  font-size: $font-size;
+  line-height: 15px;
+  color: $font-color;
+}
