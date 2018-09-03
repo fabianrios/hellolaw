@@ -1,20 +1,44 @@
 label{
     display: block;
+    color: #727889;
+    position: absolute;
+    z-index: 99999;
+    top: 7px;
+    font-size: 11px;
+    left: 15px;
+    display: none;
+}
+
+.container{
+    display: block;
+    position: relative;
 }
 
 input[type='text'], input[type='email'], input[type='password']{
     border-radius: 7px;
     width: 100%;
-    border: 1px solid #1f2533;
+    border: 1px solid #e6e3e3;
     height: 55px;
-    padding: 0 15px;
+    padding: 5px 15px 0 15px;
     display: block;
     margin-bottom: 20px;
+    &:focus{
+        border-color:#1f2533;
+    }
+}
+
+input[type='password']{
+    background: url('./assets/images/eye-regular.svg') no-repeat 95% 50%;
 }
 
 input[type='submit']{
     border: 0;
     width: 100%;
+    margin-top: 55px;
+}
+
+input:focus ~ label{
+    display: inline-block;
 }
 
 .button{

@@ -4,10 +4,14 @@
       <h1>{{ msg }}</h1>
       <p>Please log in with your credentials.</p>
       <form action="login">
-        <label for="email">E-Mail Address</label>
-        <input type="email" name="email" id="email" value="bob.loblaw@lawblog.com">
+        <div class="container">
+          <input type="email" name="email" id="email" placeholder="E-Mail Address" :value="user" required>
+          <label for="email">E-Mail Address</label>
+        </div>
+        <div class="container">
+        <input type="password" name="password" placeholder="Password" id="password">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password">
+        </div>
         <input type="submit" value="Log In" class="button radius">
       </form>
     </div>
@@ -19,7 +23,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Hello lawyer!'
+      msg: 'Hello, lawyer!',
+      user: ''
     }
   }
 }
