@@ -22,13 +22,30 @@ input[type='text'], input[type='email'], input[type='password']{
     padding: 5px 15px 0 15px;
     display: block;
     margin-bottom: 20px;
-    &:focus{
+    &:focus, &:active{
         border-color:#1f2533;
     }
 }
 
-input[type='password']{
-    background: url('./assets/images/eye-regular.svg') no-repeat 95% 50%;
+#eye{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: url('./assets/images/eye-regular.svg') no-repeat center center;
+    &.view{
+        background: url('./assets/images/eye-slash-regular.svg') no-repeat center center;
+        &.act{
+            background: url('./assets/images/eye-slash-regular.svg') no-repeat center center;
+        }
+    }
+    &.act{
+        background: url('./assets/images/eye-regular-active.svg') no-repeat center center;
+    }
 }
 
 input[type='submit']{
@@ -41,15 +58,22 @@ input:focus ~ label{
     display: inline-block;
 }
 
-.button{
-    background: #cacdd4;
-    color: #fff;
-    height: 50px;
-    &.radius{
-        border-radius: 50px;
-    }
-}
 
+$warning-color: #ed677a;
 form{
-    padding-bottom: 40px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    &.error{
+        input[type='text'], input[type='email'], input[type='password']{
+            border: 1px solid $warning-color;
+            color: $warning-color;
+            &:focus, &:active{
+                border-color:$warning-color;
+            }
+        }
+        label{
+            display: inline-block;
+            color: $warning-color;
+        }
+    }
 }
