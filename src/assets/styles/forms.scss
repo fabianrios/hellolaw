@@ -75,5 +75,11 @@ form{
             display: inline-block;
             color: $warning-color;
         }
+        #eye{
+            background: url('./assets/images/eye-warning.svg') no-repeat center center;
+            &.view{
+                background: url('./assets/images/eye-warning.svg') no-repeat center center;
+            }
+        }
     }
 }
